@@ -139,7 +139,16 @@ else:
 
             try:
                 # Промпт для ИИ
-                system_msg = "You are a mystical Tarot Reader. Use tarot emojis. Tone: Mysterious, slightly dark but empowering. Structure: 1. The Cards Drawn. 2. Deep Interpretation. 3. Direct Advice. Keep it concise."
+                # ПРОДАЮЩИЙ ПРОМПТ (CLIFFHANGER)
+                system_msg = (
+                    "You are a mystical Tarot Reader. Use tarot emojis. "
+                    "Structure: 1. The Cards Drawn. 2. Deep Interpretation. 3. Direct Advice. "
+                    "CRITICAL ENDING: End the reading with a mysterious 'Cliffhanger'. "
+                    "Tell the user that the cards reveal a strong influence or a specific person coming, "
+                    "but the vision is slightly hazy/blurred. "
+                    "Subtly suggest that a 'Master Psychic' is needed to see the specific name or date. "
+                    "Do NOT ask for money directly, just create deep intrigue."
+                )
                 user_msg = f"Querent: {user_name}, Zodiac: {zodiac}. Question: {question}. Spread: {spread_type}."
 
                 response = client.chat.completions.create(
@@ -164,7 +173,7 @@ else:
                 <div style="text-align: center;">
                     <a href="https://google.com" target="_blank">
                         <button style="background: #228B22; color: white; border: none; padding: 10px 20px; font-weight: bold; border-radius: 5px; cursor: pointer;">
-                            👁️ Chat with a Real Psychic Now
+                            👁️ Reveal the Hidden Details (Live Chat)
                         </button>
                     </a>
                 </div>
